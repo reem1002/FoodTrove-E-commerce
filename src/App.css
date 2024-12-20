@@ -2,6 +2,10 @@ body {
   background-color: #fff !important;
 }
 
+.large-screen-only {
+  display: none;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -23,4 +27,103 @@ body {
 
 ::-webkit-scrollbar-button {
   display: none !important;
+}
+
+@media (max-width: 768px) {
+  .App {
+    background-color: #f7f7f8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .large-screen-only {
+    display: block;
+    width: 100vw;
+    padding: 20px;
+    margin: auto;
+    height: 100vh;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 0.8rem !important;
+    text-align: center !important;
+    text-shadow: 1px 1px 1px #fff;
+  }
+  .large-screen-only img {
+    animation: moveUpDown 2s ease-in-out infinite;
+    max-width: 200px;
+  }
+  .large-screen-only h1 {
+    font-size: 1rem !important;
+    width: 80% !important;
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .App {
+    background-color: #f7f7f8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .desktop {
+    display: none;
+  }
+  .large-screen-only {
+    width: 100vw;
+    padding: 20px;
+    height: 100vh;
+    display: block;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 1.5rem !important;
+    text-align: center !important;
+    background-color: #f7f7f8;
+    text-shadow: 1px 1px 1px #fff;
+  }
+  .large-screen-only img {
+    animation: moveUpDown 2s ease-in-out infinite;
+  }
+
+  .large-screen-only h1 {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 }

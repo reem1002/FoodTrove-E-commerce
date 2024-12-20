@@ -86,7 +86,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #fff;
-  max-width: 250px; 
+  max-width: 250px;
   text-align: start;
 }
 
@@ -168,7 +168,7 @@
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 /* Image Styling */
@@ -178,7 +178,6 @@
   object-fit: contain;
   border-radius: 20px;
 }
-
 
 .discount {
   height: 40px;
@@ -192,7 +191,6 @@
   color: white;
   padding: 5px 10px;
 }
-
 
 .badge.hot {
   background-color: #ff6b6b;
@@ -213,8 +211,6 @@
   width: 100%;
   text-align: start !important;
 }
-
-
 
 .app-container {
   display: flex;
@@ -246,7 +242,7 @@
 }
 
 .product-list::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 .scrollbar {
   display: flex;
@@ -271,13 +267,13 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 16px;
-  width: 80%; 
+  width: 80%;
   padding: 10px;
   overflow-x: hidden !important;
 }
 
 .product-list::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .product-card:hover {
@@ -304,5 +300,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
