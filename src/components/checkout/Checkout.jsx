@@ -234,24 +234,38 @@ const CheckoutForm = () => {
                     <Summary />
                     <Card className="p-3 mb-4">
                         <h5>Payment Method</h5>
-                        <Form.Check
-                            type="radio"
-                            label="Cash on Delivery"
-                            name="paymentMethod"
-                            value="Cash on Delivery"
-                            className="custom-radio"
-                            style={{ accentColor: "red" }}
-                            onChange={handleCashOnDelivery}
-                        />
-                        <Form.Check
-                            type="radio"
-                            label="Visa/Master Card"
-                            name="paymentMethod"
-                            value="Visa/Master Card"
-                            className="custom-radio"
-                            style={{ accentColor: "red" }}
-                            onChange={handleBankTransfer}
-                        />
+                        <div>
+                            <label style={{ display: "block", marginBottom: "10px", fontSize: "16px" }}>
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="Cash on Delivery"
+                                    style={{
+                                        accentColor: "red",
+                                        marginRight: "10px",
+                                        cursor: "pointer",
+                                    }}
+                                    onChange={handleCashOnDelivery}
+                                />
+                                Cash on Delivery
+                            </label>
+
+                            <label style={{ display: "block", marginBottom: "10px", fontSize: "16px" }}>
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="Visa/Master Card"
+                                    style={{
+                                        accentColor: "red",
+                                        marginRight: "10px",
+                                        cursor: "pointer",
+                                    }}
+                                    onChange={handleBankTransfer}
+                                />
+                                Visa/Master Card
+                            </label>
+                        </div>
+
                     </Card>
                 </Col>
                 <Col md={6}>
