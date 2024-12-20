@@ -1,21 +1,19 @@
 import { configureStore } from '@reduxjs/toolkit';
-import pageNameReducer from './slices/pageNameSlice';
-import productSlice from './slices/productSlice';
-import cartSlice from './slices/cart';
-import favSlice from './slices/favSlice';
-import checkoutReducer from './slices/checkoutSlice';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'; // استخدام localStorage
+import rootReducer from './rootReducer'; // استيراد rootReducer الذي تم تعريفه
 
+const persistConfig = {
+    key: 'root',
+    storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
-    reducer: {
-
-        pageName: pageNameReducer,
-        product: productSlice,
-        cart: cartSlice,
-        fav: favSlice,
-        checkout: checkoutReducer,
-
-    },
+    reducer: persistedReducer, // استخدمي persistedReducer هنا
 });
 
-export default store;
+const persistor = persistStore(store);
+
+export { store, persistor };

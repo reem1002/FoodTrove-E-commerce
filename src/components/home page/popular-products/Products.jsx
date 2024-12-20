@@ -4,7 +4,7 @@ import "./Products.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../../../redux/slices/productSlice";
 import { Link } from "react-router-dom";
-import Skeleton from "react-loading-skeleton";
+import { ClipLoader } from 'react-spinners';
 
 const fallbackProducts = [
     {
@@ -214,18 +214,18 @@ const Products = () => {
     const dispatch = useDispatch();
     const products = useSelector((state) => state.product.products);
     const maxProducts = 10;
-    const [loading, setLoading] = useState(true); // New loading state
+    const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
         fetch("http://localhost:5000/popularProducts")
             .then((response) => response.json())
             .then((data) => {
                 dispatch(setProducts(data));
-                setLoading(false); // Set loading to false after fetching data
+                setLoading(false); 
             })
             .catch((error) => {
                 dispatch(setProducts(fallbackProducts));
-                setLoading(false); // Set loading to false even if fallback is used
+                setLoading(false); 
             });
     }, [dispatch]);
 
@@ -250,7 +250,7 @@ const Products = () => {
             <div className="products-container">
                 {loading ?
                     <div className="loading-spinner">
-                        <p>Loading...</p>
+                        <ClipLoader color="#3BB77E" />
                     </div>
 
                     : (

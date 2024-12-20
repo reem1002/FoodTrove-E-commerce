@@ -1,0 +1,39 @@
+.not-found-container {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-top: 180px;
+}
+
+.not-found-container h1 {
+  font-size: 100px;
+  color: #f43e31;
+}
+
+.not-found-container img {
+  width: 40%;
+}
+
+.not-found-container p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.not-found-container .btn {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f43e31;
+  border: 1px solid #f43e31 !important;
+}
+
+.not-found-container .btn:hover {
+  background-color: white;
+  color: #f43e31;
+  font-weight: bold;
+}

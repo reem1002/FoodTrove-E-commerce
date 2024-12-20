@@ -31,7 +31,7 @@ export default function HeroSection() {
                                 borderRadius: '30px', paddingLeft: '15px'
                             }}
                         />
-                        < button className="btn lightGreenbtn" style={{ borderRadius: '30px', marginLeft: '-60px' }}>
+                        < button className="btn lightGreenbtn" style={{ borderRadius: '30px', marginLeft: '-60px' }} onClick={() => alert('Subscribed!')}>
                             Subscribe
                         </button>
                     </div>

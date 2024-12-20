@@ -63,3 +63,7 @@
   align-items: center !important;
   margin-top: 60px !important;
 }
+
+.row-banner .lightGreenbtn:hover {
+  background-color: #f3564b !important;
+}

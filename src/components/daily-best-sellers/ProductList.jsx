@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import ProductCard from './ProductCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-
+import { ClipLoader } from 'react-spinners';
 const dailyProducts = [
     {
         id: 11,
@@ -189,7 +189,7 @@ const ProductList = () => {
         <div className="scrollbar">
             {loading ? ( // Show a loading spinner or placeholder
                 <div className="loading-spinner">
-                    <p>Loading...</p>
+                    <ClipLoader color="#3BB77E" />
                 </div>
             ) : (
                 <>

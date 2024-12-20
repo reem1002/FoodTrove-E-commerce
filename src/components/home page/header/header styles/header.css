@@ -23,6 +23,17 @@ body {
   padding: 0 5px !important;
 }
 
+.second-desk .sort-dropdown {
+  width: 150px !important;
+  box-sizing: border-box;
+  border: 1px solid #64b496;
+  cursor: pointer;
+}
+
+.second-desk .search-input {
+  border: 1px solid #64b496;
+}
+
 .icons {
   display: flex;
   align-items: center;
@@ -62,6 +73,11 @@ p {
   top: 0;
   right: -15px;
 }
-.lens:hover {
+/* .lens:hover {
   transform: scale(1.1);
+} */
+
+.register:hover {
+  transform: scale(1.05);
+  font-weight: bold;
 }

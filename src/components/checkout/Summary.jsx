@@ -6,7 +6,7 @@ import { changePageName } from "../../redux/slices/pageNameSlice";
 import { useSelector } from "react-redux";
 
 const Summary = () => {
-    // Fetch products from the Redux state
+
     const checkoutProducts = useSelector((state) => state.checkout.products);
 
     // Calculate subtotal dynamically

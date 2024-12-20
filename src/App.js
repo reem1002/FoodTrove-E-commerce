@@ -10,6 +10,7 @@ import Shop from './components/filter/Shop.jsx';
 import Checkout from './components/checkout/Checkout.jsx';
 import AboutUs from './components/about/AboutUs.jsx';
 import Faq from './components/faq/Faq.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
 
 
 
@@ -27,7 +28,8 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/faq" element={<Faq />} />
-          
+          <Route path="*" element={<NotFoundPage />} />
+
           {/* <Route path="/products" element={<Products />} />
           
           <Route path="/cart" element={<Cart />} />

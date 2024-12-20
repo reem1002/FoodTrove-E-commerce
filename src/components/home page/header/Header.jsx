@@ -11,17 +11,17 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { selectProduct } from '../../../redux/slices/productSlice';
 import { Link } from 'react-router-dom';
 import { removeFromFav } from '../../../redux/slices/favSlice';
+import { setSearchTerm, setCategory } from '../../../redux/slices/searsh';
 
 
 export default function Header() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    // Get cart items and count from Redux
+
     const cartItems = useSelector((state) => state.cart.value);
     const cartCount = cartItems.reduce((total, item) => total + 1, 0);
 
-    //handel fav
     const favItems = useSelector((state) => state.fav.value);
     const favCount = favItems.reduce((total, item) => total + 1, 0);
 
@@ -56,7 +56,7 @@ export default function Header() {
             sizes: item.sizes,
             size: item.size,
         };
-        dispatch(selectProduct(productData)); // Dispatch the correct product data
+        dispatch(selectProduct(productData));
         window.scrollTo({
             top: 0,
             behavior: "smooth",
@@ -69,6 +69,17 @@ export default function Header() {
             top: 0,
             behavior: "smooth",
         });
+    };
+    const handleSearch = (e) => {
+        if (e.key === 'Enter') {
+            dispatch(setSearchTerm(e.target.value));
+            navigate('/shop');
+        }
+    };
+
+    const handleCategoryChange = (e) => {
+        dispatch(setCategory(e.target.value));
+        navigate('/shop');
     };
     // Popover content
     const popover = (
@@ -134,6 +145,22 @@ export default function Header() {
         </Popover>
     );
 
+    const accountPopover = (
+        <Popover id="account-popover">
+            <Popover.Body>
+                <div>
+                    <Link to="/login" style={{ textDecoration: "none", color: "#000", display: "block", padding: "5px 0", marginRight: "30px" }}>
+                        <span className='register'>Login</span>
+                    </Link>
+                    <Link to="/signup" style={{ textDecoration: "none", color: "#000", display: "block", padding: "5px 0", marginRight: "30px" }}>
+                        <span className='register'>Sign Up</span>
+                    </Link>
+                </div>
+            </Popover.Body>
+        </Popover>
+    );
+
+
     return (
         <div className="header container-fluid">
             <div className="row">
@@ -160,23 +187,24 @@ export default function Header() {
                 {/* Search */}
                 <div className="col-4">
                     <div className="input-group" style={{ maxWidth: '600px', height: '40px' }}>
-                        <input type="text" className="form-control" placeholder="Search" />
+                        <input type="text" className="form-control search-input" placeholder="Search" onKeyDown={handleSearch} />
 
-                        <button
-                            className="btn btn-outline-secondary dropdown-toggle"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
+                        <select
+                            name="category"
+                            className="sort-dropdown"
+                            onChange={handleCategoryChange}
                         >
-                            All Categories
-                        </button>
-                        <ul className="dropdown-menu">
-                            <li><a className="dropdown-item" href="#">Category 1</a></li>
-                            <li><a className="dropdown-item" href="#">Category 2</a></li>
-                            <li><a className="dropdown-item" href="#">Category 3</a></li>
-                        </ul>
-                        <button className="btn search-btnn" style={{ backgroundColor: "#f53e32" }}>
-                            <RiSearchLine style={{ fontSize: '20px', color: "white" }} title="search" className="lens"/>
+                            <option value="">All categories</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Snack">Snack</option>
+                            <option value="Hodo Foods">Hodo Foods</option>
+                            <option value="Pet Foods">Pet Foods</option>
+                            <option value="Meats">Meats</option>
+                            <option value="Coffes">Coffes</option>
+                            <option value="Cream">Cream</option>
+                        </select>
+                        <button className="btn" style={{ backgroundColor: "#f53e32", cursor: "auto" }}>
+                            <RiSearchLine style={{ fontSize: '20px', color: "white", cursor: "auto" }} title="search" className="lens" />
                         </button>
                     </div>
                 </div>
@@ -186,7 +214,11 @@ export default function Header() {
                     <div className="row p-3">
                         {/* User Icon */}
                         <div className="col-auto icon">
-                            <RiUserLine style={{ fontSize: '20px', cursor: 'pointer' }} title="user" />
+                            <OverlayTrigger trigger="click" placement="bottom" overlay={accountPopover} rootClose>
+                                <span>
+                                    <RiUserLine style={{ fontSize: '20px', cursor: 'pointer' }} title="user" />
+                                </span>
+                            </OverlayTrigger>
                         </div>
 
                         {/* Wishlist Icon */}

@@ -3,6 +3,7 @@ import { Form, Button, Card, Row, Col, Modal } from "react-bootstrap";
 import "./CheckoutForm.css";
 import HeadingBar from "../heading bar/red-heading-bar";
 import Summary from "./Summary";
+import Swal from "sweetalert2";
 
 const CheckoutForm = () => {
     const [billingDetails, setBillingDetails] = useState({
@@ -14,36 +15,208 @@ const CheckoutForm = () => {
         country: "",
         region: "",
     });
+
     const [cardDetails, setCardDetails] = useState({
-        cardNumber: '',
-        cardHolderName: '',
-        expiryDate: '',
-        cvv: ''
+        cardNumber: "",
+        cardHolderName: "",
+        expiryDate: "",
+        cvv: "",
     });
 
-    const [bankTransfer, setBankTransfer] = useState(false);
     const [paymentMethod, setPaymentMethod] = useState("");
     const [showBankModal, setShowBankModal] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setBillingDetails({ ...billingDetails, [name]: value });
+        if (name === "paymentMethod") {
+            setPaymentMethod(value);
+        } else if (
+            ["cardNumber", "cardHolderName", "expiryDate", "cvv"].includes(name)
+        ) {
+            setCardDetails({ ...cardDetails, [name]: value });
+        } else {
+            setBillingDetails({ ...billingDetails, [name]: value });
+        }
+    };
+
+    const isFormValid = () => {
+        return (
+            billingDetails.firstName &&
+            billingDetails.lastName &&
+            billingDetails.address &&
+            billingDetails.city &&
+            billingDetails.postCode &&
+            billingDetails.country &&
+            billingDetails.region &&
+            paymentMethod &&
+            (paymentMethod !== "Visa/Master Card" ||
+                (cardDetails.cardNumber &&
+                    cardDetails.cardHolderName &&
+                    cardDetails.expiryDate &&
+                    cardDetails.cvv))
+        );
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Billing Details:", billingDetails);
-        console.log("Payment Method:", paymentMethod);
+
+        // Validate payment method
+        if (!paymentMethod) {
+            Swal.fire({
+                icon: "error",
+                title: "No Payment Method Selected",
+                text: "Please select a payment method.",
+                confirmButtonText: "OK",
+                customClass: {
+                    confirmButton: "btn-alert",
+                },
+            });
+            return;
+        }
+
+        // Validate billing details
+        if (
+            !billingDetails.firstName ||
+            !billingDetails.lastName ||
+            !billingDetails.address ||
+            !billingDetails.city ||
+            !billingDetails.postCode ||
+            !billingDetails.country ||
+            !billingDetails.region
+        ) {
+            Swal.fire({
+                icon: "error",
+                title: "Missing Billing Information",
+                text: "Please fill in all required billing details.",
+                confirmButtonText: "OK",
+                customClass: {
+                    confirmButton: "btn-alert",
+                },
+            });
+            return;
+        }
+
+        // If payment method is Visa/Master Card, validate card details
+        if (paymentMethod === "Visa/Master Card") {
+            if (
+                !cardDetails.cardNumber ||
+                !cardDetails.cardHolderName ||
+                !cardDetails.expiryDate ||
+                !cardDetails.cvv
+            ) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Incomplete Payment Details",
+                    text: "Please fill in all payment details.",
+                    confirmButtonText: "OK",
+                    customClass: {
+                        confirmButton: "btn-alert",
+                    },
+                });
+                return;
+            }
+        }
+
+        Swal.fire({
+            icon: "success",
+            title: "Order Placed Successfully!",
+            text: "Your order has been placed successfully.",
+            confirmButtonText: "OK",
+            customClass: {
+                confirmButton: "btn-alert",
+            },
+        });
     };
 
     const handleBankTransfer = () => {
-        setBankTransfer(true);
-        setPaymentMethod("Bank Transfer");
+        setPaymentMethod("Visa/Master Card");
         setShowBankModal(true);
     };
 
+    const handleCardPaymentConfirm = () => {
+        // Validate card details
+        if (
+            !cardDetails.cardNumber ||
+            !cardDetails.cardHolderName ||
+            !cardDetails.expiryDate ||
+            !cardDetails.cvv
+        ) {
+            Swal.fire({
+                icon: "error",
+                title: "Incomplete Payment Details",
+                text: "Please fill in all payment details.",
+                confirmButtonText: "OK",
+                customClass: {
+                    confirmButton: "btn-alert",
+                },
+            });
+            return;
+        }
+
+        // Validate card number (16 digits)
+        const cardNumberPattern = /^[0-9]{16}$/;
+        if (!cardNumberPattern.test(cardDetails.cardNumber)) {
+            Swal.fire({
+                icon: "error",
+                title: "Invalid Card Number",
+                text: "Please enter a valid 16-digit card number.",
+                confirmButtonText: "OK",
+                customClass: {
+                    confirmButton: "btn-alert",
+                },
+            });
+            return;
+        }
+
+        // Validate expiry date (must not be in the past)
+        const currentMonth = new Date().getMonth() + 1;
+        const currentYear = new Date().getFullYear();
+        const [expiryYear, expiryMonth] = cardDetails.expiryDate.split("-");
+        if (
+            parseInt(expiryYear) < currentYear ||
+            (parseInt(expiryYear) === currentYear &&
+                parseInt(expiryMonth) < currentMonth)
+        ) {
+            Swal.fire({
+                icon: "error",
+                title: "Invalid Expiry Date",
+                text: "Your card has expired. Please enter a valid expiry date.",
+                confirmButtonText: "OK",
+                customClass: {
+                    confirmButton: "btn-alert",
+                },
+            });
+            return;
+        }
+
+        // Validate CVV (3 digits)
+        if (cardDetails.cvv.length !== 3) {
+            Swal.fire({
+                icon: "error",
+                title: "Invalid CVV",
+                text: "Please enter a valid 3-digit CVV.",
+                confirmButtonText: "OK",
+                customClass: {
+                    confirmButton: "btn-alert",
+                },
+            });
+            return;
+        }
+
+        // If validation passes, close the modal and confirm
+        setShowBankModal(false);
+        Swal.fire({
+            icon: "success",
+            title: "Payment Confirmed",
+            text: "Your payment details have been successfully verified.",
+            confirmButtonText: "OK",
+            customClass: {
+                confirmButton: "btn-alert",
+            },
+        });
+    };
+
     const handleCashOnDelivery = () => {
-        setBankTransfer(false);
         setPaymentMethod("Cash on Delivery");
     };
 
@@ -51,44 +224,36 @@ const CheckoutForm = () => {
         setShowBankModal(false);
     };
 
-    const handlePlaceOrder = () => {
-        //sweet alert
-        alert("Order Placed Successfully!");
-    }
-
-
     return (
         <div className="check-container">
             <div className="heading-bar">
                 <HeadingBar />
             </div>
-            <Row className="justify-content-center p-4 wholepagee ">
-                {/* Order Summary */}
+            <Row className="justify-content-center p-4 wholepagee">
                 <Col md={4}>
                     <Summary />
-                    {/* Payment Method */}
                     <Card className="p-3 mb-4">
                         <h5>Payment Method</h5>
                         <Form.Check
                             type="radio"
                             label="Cash on Delivery"
                             name="paymentMethod"
+                            value="Cash on Delivery"
                             className="custom-radio"
-                            style={{ accentColor: 'red' }}
+                            style={{ accentColor: "red" }}
                             onChange={handleCashOnDelivery}
                         />
                         <Form.Check
                             type="radio"
                             label="Visa/Master Card"
                             name="paymentMethod"
+                            value="Visa/Master Card"
                             className="custom-radio"
-                            style={{ accentColor: 'red' }}
+                            style={{ accentColor: "red" }}
                             onChange={handleBankTransfer}
                         />
                     </Card>
                 </Col>
-
-                {/* Billing Details */}
                 <Col md={6}>
                     <Card className="p-4">
                         <h5>Billing Details</h5>
@@ -154,7 +319,11 @@ const CheckoutForm = () => {
                                 <Col md={6}>
                                     <Form.Group controlId="country">
                                         <Form.Label>Country</Form.Label>
-                                        <Form.Control as="select" name="country" onChange={handleInputChange}>
+                                        <Form.Control
+                                            as="select"
+                                            name="country"
+                                            onChange={handleInputChange}
+                                        >
                                             <option value="">Select Country</option>
                                             <option value="Egypt">Egypt</option>
                                             <option value="India">India</option>
@@ -179,14 +348,13 @@ const CheckoutForm = () => {
                         type="submit"
                         className="mt-3 col-3 btn-checkout"
                         style={{ float: "right" }}
-                        onClick={handlePlaceOrder}
+                        onClick={handleSubmit}
+                        disabled={!isFormValid()}
                     >
                         Place Order
                     </Button>
                 </Col>
             </Row>
-
-            {/* Bank Transfer Modal */}
             <Modal show={showBankModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
                     <Modal.Title>Card Payment Details</Modal.Title>
@@ -238,7 +406,7 @@ const CheckoutForm = () => {
                     <Button variant="secondary" onClick={handleCloseModal}>
                         Close
                     </Button>
-                    <Button variant="danger" onClick={handleCloseModal}>
+                    <Button variant="danger" onClick={handleCardPaymentConfirm}>
                         Confirm
                     </Button>
                 </Modal.Footer>
@@ -248,6 +416,3 @@ const CheckoutForm = () => {
 };
 
 export default CheckoutForm;
-
-
-

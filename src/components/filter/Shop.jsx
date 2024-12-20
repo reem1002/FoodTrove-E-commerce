@@ -8,6 +8,10 @@ import { selectProduct } from "../../redux/slices/productSlice";
 import { Link } from "react-router-dom";
 import HeadingBar from "../heading bar/red-heading-bar";
 import { changePageName } from "../../redux/slices/pageNameSlice";
+import { ClipLoader } from 'react-spinners';
+
+
+
 const fallbackProducts = [
     {
         id: 1,
@@ -213,35 +217,57 @@ const fallbackProducts = [
 const Shop = () => {
 
     const [products, setProducts] = useState([]);
+    const { searchTerm, category } = useSelector((state) => state.filter);
     const [loading, setLoading] = useState(true);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [filters, setFilters] = useState({
         brand: "",
         dietType: [],
         minPrice: 0,
-        maxPrice: 1000, // Default max price, you can adjust this based on the product prices
+        maxPrice: 1000, 
         minRating: "",
-        category: "",
+        category: category,
     });
-    const [currentPage, setCurrentPage] = useState(1); // Tracks the current page
-    const productsPerPage = 6; // Number of products per page
+    const [currentPage, setCurrentPage] = useState(1);
+    const productsPerPage = 6; 
     const dispatch = useDispatch();
     const cart = useSelector((state) => state.cart.value);
 
     useEffect(() => {
-        dispatch(changePageName("Shop"));
-        // Fetch products from the JSON server
+        dispatch(changePageName("Shop"))
         fetch("http://localhost:5000/popularProducts")
             .then((response) => response.json())
             .then((data) => {
                 setProducts(data);
-                setLoading(false); // Set loading to false after fetching data
+                setLoading(false); 
             })
             .catch((error) => {
                 setProducts(fallbackProducts);
-                setLoading(false); // Set loading to false even if fallback is used
+                setLoading(false); 
             });
-    }, []);
+
+
+
+
+    }, [dispatch]);
+
+    useEffect(() => {
+        if (!loading) {
+            const filtered = products.filter((product) => {
+                const matchesSearch =
+                    !searchTerm ||
+                    product.title.toLowerCase().includes(searchTerm.toLowerCase());
+
+                const matchesCategory =
+                    !category ||
+                    product.category.toLowerCase() === category.toLowerCase();
+
+                return matchesSearch && matchesCategory;
+            });
+
+            setFilteredProducts(filtered);
+        }
+    }, [searchTerm, category, products, loading]);
 
     const handleAddToCart = (product) => {
         const existingProduct = cart.find((item) => item.id === product.id);
@@ -330,7 +356,6 @@ const Shop = () => {
     };
 
     useEffect(() => {
-        // Apply filters
         let filtered = products;
 
         if (filters.category) {
@@ -375,7 +400,7 @@ const Shop = () => {
         setCurrentPage(1);
     }, [filters, products]);
 
-    // Calculate the products to display for the current page
+
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
     const currentProducts = filteredProducts.slice(
@@ -383,7 +408,6 @@ const Shop = () => {
         indexOfLastProduct
     );
 
-    // Calculate total pages
     const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
     const handlePageChange = (pageNumber) => {
@@ -535,7 +559,7 @@ const Shop = () => {
                     {
                         loading ? (
                             <div className="loading-spinner">
-                                <p>Loading...</p>
+                                <ClipLoader color="#3BB77E" />
                             </div>
                         ) : (
                             <div className="product-grid">

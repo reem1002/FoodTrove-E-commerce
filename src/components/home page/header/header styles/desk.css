@@ -56,19 +56,19 @@ body {
 }
 
 .nav-link {
-  color: #000; /* Or your desired color */
+  color: #000;
   text-decoration: none;
 }
 
 .nav-link:visited {
-  color: #000; /* Same as the normal link color */
+  color: #000; 
 }
 
 .nav-link:focus,
 .nav-link:active {
   outline: none;
-  color: #000; /* Or set to your desired color */
-  text-decoration: none; /* Removes underline if applied */
+  color: #000;
+  text-decoration: none; 
 }
 .telephone {
   margin-left: 20px !important;

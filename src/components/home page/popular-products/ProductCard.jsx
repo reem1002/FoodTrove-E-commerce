@@ -76,7 +76,7 @@ const ProductCard = ({
             items,
             sizes,
         };
-        dispatch(addToCart(productData)); // Dispatch addToCart action
+        dispatch(addToCart(productData));
     };
 
     return (
@@ -106,13 +106,13 @@ const ProductCard = ({
                 </div>
                 <div className="d-flex align-items-center mb-2 add-to-cart">
                     <span className="fw-bold lightGreen me-2 fs-6">${price}</span>
-                        <span className="text-muted text-decoration-line-through">
-                            {oldPrice !== 0 ? `$${oldPrice}` : ""}
-                        </span>
-                    
+                    <span className="text-muted text-decoration-line-through">
+                        {oldPrice !== 0 ? `$${oldPrice}` : ""}
+                    </span>
+
                     <button
                         className="btn btn-danger btn-sm align-self-start"
-                        onClick={handleAddToCart} // Add onClick handler
+                        onClick={handleAddToCart}
                     >
                         <RiShoppingCartLine style={{ fontSize: "20px", color: "white", marginRight: "5px" }} title="cart" />
                         Add
