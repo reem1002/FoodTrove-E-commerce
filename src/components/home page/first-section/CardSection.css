@@ -1,0 +1,41 @@
+.big {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+.big .card-container {
+  width: 80%;
+  padding-left: 20px !important;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px;
+}
+
+.big .card-container .card-body {
+  display: flex;
+  width: 52%;
+  margin: 2rem;
+  text-align: start;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  position: relative;
+}
+
+.big .card-container .card-body .card-title {
+  font-size: 1rem !important;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.big .card-container .card-body button {
+  position: absolute;
+  bottom: 10px;
+  left: 18px;
+}
+

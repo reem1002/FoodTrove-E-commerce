@@ -1,0 +1,309 @@
+/* shop.css */
+.wholepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 105px;
+  position: relative;
+}
+.product-page {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0 220px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  font-family: Poppins, sans-serif;
+  margin-top: 50px;
+}
+
+/* Sidebar Styles */
+.product-page .sideMenu {
+  width: 250px;
+  background-color: #f7f7f8;
+  border: 1px solid #e9e9e9;
+  padding: 15px;
+  border-radius: 5px;
+  max-height: fit-content;
+  font-family: Poppins, sans-serif;
+}
+
+.product-page .main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.sideMenu p {
+  font-weight: bold;
+  margin: 20px 10px 0px 10px;
+  color: #555;
+}
+
+.sort-dropdown,
+.filter-range,
+.price-display span {
+  width: 100%;
+  font-size: 14px;
+  padding: 5px;
+
+  border-radius: 5px;
+}
+
+/* Style for the range slider track */
+.filter-range {
+  -webkit-appearance: none; /* Removes default styling */
+  appearance: none;
+  width: 100%; /* Full width */
+  height: 8px; /* Thickness of the track */
+  background: #f7d1cf; /* Lighter shade of the red for the track */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Removes focus outline */
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* Thumb (circle) styling */
+.filter-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #f53e32;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Add hover/active effects for the thumb */
+.filter-range::-webkit-slider-thumb:hover {
+  background: #e0382c;
+}
+
+.filter-range::-webkit-slider-thumb:active {
+  background: #c82e24;
+}
+
+/* Track styling for Firefox */
+.filter-range::-moz-range-track {
+  background: #f7d1cf;
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* Thumb styling for Firefox */
+.filter-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #f53e32;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+
+/* Active track color (optional) */
+.filter-range::-moz-range-progress {
+  background: #f53e32;
+}
+
+label {
+  font-size: 14px;
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.diet-type-checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-display {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f7f8;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e9e9e9;
+  margin-bottom: 20px;
+  font-family: Poppins, sans-serif;
+}
+
+.filter-button {
+  padding: 4px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #f04e4e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-button:hover {
+  background-color: #e84141;
+}
+
+.result-count {
+  font-size: 14px;
+  color: #888;
+}
+
+.filter-controls .sort-dropdown {
+  width: 150px;
+  font-family: Poppins, sans-serif;
+}
+.filter-controls {
+  margin: 0 !important;
+}
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+
+.product-page .product-card {
+  background-color: #fff;
+  max-width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-page .product-card img {
+  max-width: 75%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-page .product-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.product-page .product-price {
+  margin-bottom: 10px;
+}
+
+.product-page .current-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f04e4e;
+}
+
+.product-page .original-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+
+.product-page .rating {
+  font-size: 14px;
+  color: #f4b400;
+}
+
+.product-page .review-count {
+  font-size: 12px;
+  color: #666;
+  margin-left: 5px;
+}
+
+/* Pagination */
+.product-page .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.product-page .pagination-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #777777;
+  background-color: #fff;
+  border: 1px solid #e9e9e9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.product-page .pagination-button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.product-page .pagination-button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.pagination-button.active {
+  color: #fff;
+  background-color: #e84141;
+}
+
+.pagination-button:disabled {
+  background-color: #f7f7f8;
+  cursor: not-allowed;
+}
+.filter-controls {
+  margin: 0 !important;
+}
+/* Base styling for the checkbox */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border: 1px solid #f53e32;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Checkbox checked state */
+input[type="checkbox"]:checked {
+  background-color: #f53e32;
+  border-color: #f53e32;
+}
+
+/* Styling for the "checkmark" when checked */
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  display: block;
+  margin: -1px 0 0 2px;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Hover effect */
+input[type="checkbox"]:hover {
+  border-color: #e0382c;
+}
+
+/* Focus state for accessibility */
+input[type="checkbox"]:focus {
+  outline: 1px solid #f7d1cf;
+}

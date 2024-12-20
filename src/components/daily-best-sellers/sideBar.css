@@ -1,0 +1,5 @@
+.shop-button:hover {
+  background-color: #fe2c2c !important;
+  color: white !important;
+  font-weight: bold;
+}

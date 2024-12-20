@@ -1,0 +1,271 @@
+.top-container {
+  margin-top: 105px;
+  position: relative;
+  background-color: #fff;
+}
+.product-details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.first {
+  display: flex;
+  gap: 10px;
+}
+
+.product-left {
+  flex: 1;
+  padding: 10px;
+}
+
+.main-product-image {
+  width: 85%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.main-product-image:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.thumbnail-image {
+  width: 16%;
+  height: auto;
+  cursor: pointer;
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+}
+
+.product-right {
+  flex: 1;
+  padding: 10px;
+  text-align: start;
+}
+
+.product-description {
+  margin: 5px 0;
+  color: #555;
+}
+
+.product-rating span {
+  margin-right: 3px;
+  color: #ffb400;
+}
+
+.product-info p {
+  margin: 3px 0;
+}
+
+.product-price {
+  margin: 10px 0;
+}
+
+.discounted-price {
+  font-size: 18px !important;
+  color: #f53e32;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #777;
+  font-size: 14px !important;
+  font-weight: 500;
+}
+
+.size-weight {
+  margin: 5px 0;
+}
+
+.product-info p {
+  font-size: 16px !important;
+}
+
+.size-button {
+  margin: 3px;
+  padding: 3px 6px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.product-quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.product-quantity input {
+  width: 50px;
+  padding: 3px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.top-container .add-to-cart {
+  padding: 8px 15px;
+  background-color: #f53e32;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 !important;
+  font-size: 14px !important;
+}
+
+.wishlist,
+.compare {
+  padding: 6px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.product-tabs {
+  display: flex;
+}
+
+.tab {
+  background-color: #f8f8f8;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.tab.active {
+  background-color: #f53e32;
+  color: white;
+}
+
+.tab-content {
+  margin-top: 10px;
+  text-align: start;
+  font-size: 14px !important;
+}
+
+.additional {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.top-container .additional h3 {
+  font-weight: bold;
+  font-size: 24px !important;
+  margin-bottom: 20px;
+}
+
+.top-container .product-list {
+  width: 100%;
+  height: 100% !important;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.top-container .product-list h4 {
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #000 !important;
+}
+
+.top-container .product-list .add-to-cart {
+  display: none;
+}
+
+.top-container .product-list .discount {
+  display: none;
+}
+
+.top-container .product-list .sold-info {
+  display: none;
+}
+
+.top-container .product-list .product-price {
+  color: #f53e32;
+  font-weight: bold;
+  font-size: 16px !important;
+  margin-bottom: 20px !important;
+}
+
+.top-container .product-list .product-card-container {
+  max-width: 182px !important;
+}
+
+.decor1 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.decor3 {
+  position: absolute;
+  bottom: 20%;
+  left: 50px;
+}
+
+.decor4 {
+  position: absolute;
+  bottom: 55%;
+  right: 5%;
+}
+
+.top-container .product-list .product-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  align-self: center;
+}
+.wishlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-details::-webkit-scrollbar {
+  width: 8px;
+}
+
+.product-details::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.product-details::-webkit-scrollbar-thumb {
+  background-color: #f23f30 !important;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f23f30 #f1f1f1;
+}
+
+::-webkit-scrollbar-button {
+  display: none !important;
+}

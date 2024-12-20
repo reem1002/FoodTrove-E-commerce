@@ -1,0 +1,65 @@
+.green-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  text-align: start !important;
+}
+.banner-container {
+  background-image: url("../../../../public/imgs/lastsectionyarab/footer.png");
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 75% !important ;
+  position: relative;
+  text-align: start;
+}
+.green-banner-image {
+  position: absolute;
+  width: 45%;
+  bottom: 0px;
+  right: 50px;
+}
+
+.left-side-banner {
+  width: 50% !important;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column;
+  padding: 20px;
+  text-align: start !important;
+  margin: auto;
+}
+
+.left-side-banner h2 {
+  width: 75%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: start !important;
+  color: #253d4e;
+}
+
+.left-side-banner p {
+  width: 75%;
+  font-size: 15px;
+  text-align: start !important;
+}
+
+.left-side-banner button {
+  background-color: #f53e32 !important;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: -140px !important;
+}
+
+.row-banner {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 60px !important;
+}

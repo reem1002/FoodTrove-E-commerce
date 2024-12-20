@@ -1,0 +1,29 @@
+/* Make the tab container and content area look cleaner */
+.custom-tabs .nav-link {
+  border: none;
+  color: #000; /* Default tab text color */
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.custom-tabs .nav-link.active {
+  color: #ff4a4a; /* Red color for active tab text */
+  font-weight: bold;
+  border-bottom: 4px solid #64b496; /* Bottom border for active tab */
+}
+
+.custom-tabs .nav-link:hover {
+  color: #ff4a4a; /* Hover effect */
+}
+
+/* Style the tab content text for better readability */
+.custom-tabs .tab-content p {
+  color: #666;
+  line-height: 1.6;
+}
+.tap-container {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px 40px;
+  margin-bottom: 100px;
+}

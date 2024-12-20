@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif !important;
+}
+.header {
+  background-color: #fff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000000000;
+}
+
+.second-desk {
+  display: flex;
+  flex-wrap: nowrap !important;
+  justify-content: space-evenly !important;
+  align-items: center;
+  margin: 0 !important;
+  background-color: #fff;
+  padding: 0 5px !important;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+/* .icons img {
+  margin-right: 20px;
+} */
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem !important;
+  font-weight: 500;
+}
+.btn-outline-secondary {
+  margin-left: 0.05px !important;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+.logo {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.logo:hover {
+  transform: scale(1.03);
+}
+
+.cart-count {
+  top: 0;
+  right: -15px;
+}
+.lens:hover {
+  transform: scale(1.1);
+}

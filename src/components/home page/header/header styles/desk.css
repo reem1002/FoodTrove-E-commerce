@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.desk-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 150px !important;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav {
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-font-weight: ;
+  --bs-nav-link-color: var(#000) !important;
+  --bs-nav-link-hover-color: var(#000) !important ;
+  --bs-nav-link-disabled-color: var(#000) !important;
+  --bs-nav-link-color: var(#000) !important;
+  --bs-nav-link-hover-color: var(#000) !important;
+}
+.navLinkk {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+}
+
+.navLinkk ul {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinkk a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 5px;
+}
+.navLinkk a:hover {
+  color: #242323;
+  font-weight: bold;
+}
+
+.navLinkk a:focus,
+.navLinkk a:active,
+.navLinkk a:visited {
+  color: #242323;
+}
+
+.nav-link {
+  color: #000; /* Or your desired color */
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  color: #000; /* Same as the normal link color */
+}
+
+.nav-link:focus,
+.nav-link:active {
+  outline: none;
+  color: #000; /* Or set to your desired color */
+  text-decoration: none; /* Removes underline if applied */
+}
+.telephone {
+  margin-left: 20px !important;
+}
+/* 
+
+.humbergerlist {
+  margin-right: 50px !important;
+} */
+
+.nav-link {
+  -webkit-tap-highlight-color: transparent !important;
+}

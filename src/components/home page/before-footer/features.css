@@ -1,0 +1,53 @@
+.feature-list {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding: 0 188px;
+  margin-bottom: 50px;
+}
+
+.feature-card {
+  background-color: #f4f6fa;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: center !important;
+}
+
+.feature-card:hover {
+  transform: scale(1.015);
+}
+
+.icon-wrapper {
+  background-color: #e0f7e9;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.feature-icon {
+  color: #6fcf97;
+  font-size: 24px;
+}
+
+.feature-text h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0 5px;
+}
+
+.feature-text p {
+  font-size: 10px !important;
+  color: #777;
+}

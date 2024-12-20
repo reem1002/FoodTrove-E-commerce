@@ -1,0 +1,97 @@
+.hero-section {
+  background-color: #e6e6e6; /* Light grey background */
+  height: 520px !important;
+
+  padding: 0 10rem !important;
+
+  margin-top: 105px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section h6 {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.hero-section .display-3 {
+  font-weight: bold;
+  font-size: 2.5rem !important;
+  /* margin-bottom: 1rem; */
+}
+
+.hero-section .input-group .form-control {
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #ccc;
+}
+
+.hero-section .input-group .btn-success {
+  border-radius: 0 20px 20px 0;
+}
+
+.hero-section .badge {
+  font-size: 0.7rem !important;
+  /* padding: 0.6rem 1rem; */
+  color: #444;
+  border-radius: 20px;
+  background-color: #e6e6e6;
+}
+
+.lattace {
+  position: absolute;
+  bottom: -10px;
+  right: -90px;
+}
+.fruit-dish-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.leaf-img {
+  position: absolute;
+  top: -8px;
+  left: -15px;
+}
+.orange-img {
+  position: absolute;
+  top: -18px;
+  right: 50%;
+}
+.toot-img {
+  position: absolute;
+  bottom: 18%;
+  right: 40%;
+}
+
+.left-side {
+  text-align: left;
+  justify-content: start;
+}
+
+.left-side p {
+  text-align: left;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.under-line {
+  text-decoration: underline;
+}
+.right-side {
+  margin: 0 auto;
+}
+
+.lightGreenbtn {
+  background-color: #3bb77e !important;
+  color: #fff !important;
+  padding: 0.7rem 1.4rem !important;
+  z-index: 100000 !important;
+}
+
+.bubbels {
+  font-family: "Quicksand", sans-serif;
+}
+
+.bubbels span {
+  padding: 0.6rem 1rem !important;
+}

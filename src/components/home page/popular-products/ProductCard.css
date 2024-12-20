@@ -1,0 +1,91 @@
+.product-card {
+  border: none !important;
+  border-radius: 15px !important;
+  transition: box-shadow 0.2s ease-in-out;
+  height: max-content;
+  font-family: "Quicksand", "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background: none;
+  border-bottom: none;
+}
+
+.card-img-top {
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: contain;
+  border-radius: 20px;
+
+  align-self: center;
+}
+
+.card-header-badge {
+  height: 25px;
+}
+
+.badge {
+  border: none !important;
+  align-self: start;
+  border-top-left-radius: 15px !important;
+  border-bottom-right-radius: 15px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  font-size: 0.8rem !important;
+}
+
+.badge.hot {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.badge.sale {
+  background-color: #4da8f0;
+  color: white;
+}
+
+.badge.new {
+  background-color: #4caf50;
+  color: white;
+}
+
+.card-body {
+  width: 100%;
+  text-align: start;
+}
+.by span {
+  font-size: 0.9em;
+}
+
+.add-to-cart {
+  position: relative;
+  margin-top: 10px;
+}
+
+.add-to-cart button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.lightGreen {
+  color: #3bb77e !important;
+}
+
+.card-title {
+  font-size: 14px !important;
+}
+
+.small {
+  font-size: 0.9em !important;
+}
