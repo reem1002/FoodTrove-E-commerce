@@ -185,7 +185,7 @@ export default function Header() {
                 </div>
 
                 {/* Search */}
-                <div className="col-4">
+                <div className="col-4 search">
                     <div className="input-group" style={{ maxWidth: '600px', height: '40px' }}>
                         <input type="text" className="form-control search-input" placeholder="Search" onKeyDown={handleSearch} />
 

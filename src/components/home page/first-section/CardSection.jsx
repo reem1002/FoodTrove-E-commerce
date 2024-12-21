@@ -53,7 +53,7 @@ const Card = ({ bgImage, title, buttonText }) => {
                 <div className="card-body ">
                     <h4 className="card-title mb-3">{title}</h4>
                     <Link to="/shop" >
-                        <button className="btn btn-danger" onClick={handelClick}>{buttonText}</button>
+                        <button className="btn btn-danger " onClick={handelClick}>{buttonText}</button>
                     </Link>
 
                 </div>

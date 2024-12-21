@@ -79,7 +79,7 @@ body {
   }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .App {
     background-color: #f7f7f8;
     width: 100vw;
@@ -126,4 +126,4 @@ body {
       transform: translateY(0);
     }
   }
-}
+} */

@@ -95,3 +95,110 @@
 .bubbels span {
   padding: 0.6rem 1rem !important;
 }
+
+@media (max-width: 1200px) {
+  .hero-section {
+    height: auto;
+    padding: 0 5rem !important;
+  }
+
+  .hero-section .display-3 {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-section .input-group .form-control {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .hero-section .input-group .lightGreenbtn {
+    border-radius: 0 0 10px 10px;
+    padding: 0.5rem 1rem !important;
+  }
+  .hero-section p {
+    font-size: 0.9rem !important;
+  }
+  .right-side {
+    width: 55% !important;
+  }
+  .right-side span {
+    padding: 0.3rem 0.5rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 0 5rem !important;
+  }
+
+  .hero-section .display-3 {
+    font-size: 1.3rem !important;
+  }
+
+  .left-side span {
+    font-size: 16px !important;
+  }
+
+  .left-side {
+    width: 50% !important;
+  }
+
+  .right-side {
+    width: 50% !important;
+  }
+
+  .right-side span {
+    padding: 0.3rem 0.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 0 5rem !important;
+  }
+
+  .hero-section .display-3 {
+    font-size: 1.3rem !important;
+  }
+
+  .left-side span {
+    font-size: 16px !important;
+  }
+
+  .left-side {
+    width: 50% !important;
+  }
+
+  .right-side {
+    width: 50% !important;
+  }
+
+  .right-side span {
+    padding: 0.3rem 0.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 0 2rem !important;
+  }
+
+  .hero-section .display-3 {
+    font-size: 1.1rem !important;
+  }
+
+  .left-side span {
+    font-size: 14px !important;
+  }
+
+  .left-side {
+    width: 100% !important;
+  }
+
+  .right-side {
+    width: 100% !important;
+  }
+
+  .right-side span {
+    padding: 0.3rem 0.5rem !important;
+  }
+}

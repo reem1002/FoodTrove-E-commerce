@@ -45,7 +45,7 @@ function App() {
       </div>
       <div className="large-screen-only">
         <img src={process.env.PUBLIC_URL + "/imgs/not-found.png"} alt="404" />
-        <h1>Sorry, this site is only available on large screens.</h1>
+        <h1>Sorry, this site is only available on larger screens.</h1>
       </div>
 
     </div>

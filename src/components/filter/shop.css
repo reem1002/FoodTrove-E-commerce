@@ -305,3 +305,122 @@ input[type="checkbox"]:focus {
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 1200px) {
+  .product-page {
+    flex-direction: column;
+    padding: 0 40px !important;
+  }
+
+  .product-page .sideMenu {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-page {
+    padding: 0 20px !important;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .product-page .product-card {
+    max-width: 100% !important;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    gap: 10px !important;
+    min-width: auto !important;
+  }
+
+  .filter-controls .sort-dropdown {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-page {
+    padding: 0 10px !important;
+  }
+
+  .filter-section {
+    flex-direction: column !important;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-page .product-card img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .filter-controls {
+    margin: 0 !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .wholepage {
+    margin-top: 50px !important;
+  }
+
+  .product-page {
+    padding: 0 5px !important;
+  }
+
+  .filter-section {
+    padding: 5px !important;
+    flex-direction: column !important;
+  }
+
+  .product-page .sideMenu {
+    padding: 10px !important;
+    font-size: 14px !important;
+  }
+
+  .product-page .product-card {
+    padding: 10px !important;
+  }
+
+  .filter-button {
+    font-size: 16px !important;
+    padding: 6px !important;
+  }
+
+  .sort-dropdown {
+    font-size: 12px !important;
+    padding: 4px !important;
+  }
+
+  label {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .filter-controls {
+    gap: 5px !important;
+  }
+
+  .filter-button {
+    width: 100% !important;
+    padding: 5px !important;
+  }
+
+  .product-page .product-card img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}

@@ -67,3 +67,130 @@
 .row-banner .lightGreenbtn:hover {
   background-color: #f3564b !important;
 }
+
+@media (max-width: 1200px) {
+  .banner-container {
+    width: 85% !important;
+    height: 300px;
+  }
+
+  .green-banner-image {
+    width: 50%;
+    right: 30px;
+  }
+
+  .left-side-banner h2 {
+    font-size: 20px; /* Reduced for medium screens */
+  }
+
+  .left-side-banner p {
+    font-size: 12px; /* Reduced for medium screens */
+  }
+
+  .left-side-banner button {
+    margin-left: -100px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner-container {
+    width: 90% !important;
+    height: 250px;
+    display: flex;
+  }
+
+  .green-banner-image {
+    position: relative;
+    width: 70%;
+    right: 0;
+    margin: auto;
+  }
+
+  .left-side-banner {
+    width: 100% !important;
+    padding: 10px;
+  }
+
+  .left-side-banner h2 {
+    font-size: 18px;
+    width: 90%;
+  }
+  .left-side-banner {
+    max-width: 50% !important;
+  }
+
+  .left-side-banner p {
+    font-size: 11px;
+    width: 90%;
+  }
+
+  .left-side-banner button {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    width: 90% !important;
+    height: 250px;
+  }
+
+  .green-banner-image {
+    position: relative;
+    width: 70%;
+    right: 0;
+    margin: auto;
+  }
+
+  .left-side-banner {
+    width: 100% !important;
+    padding: 10px;
+  }
+
+  .left-side-banner h2 {
+    font-size: 18px; /* Reduced for smaller screens */
+    width: 90%;
+  }
+
+  .left-side-banner p {
+    font-size: 11px; /* Reduced for smaller screens */
+    width: 90%;
+  }
+
+  .left-side-banner button {
+    margin-left: 0 !important;
+  }
+
+  .row-banner {
+    flex-direction: column !important;
+    margin-top: 30px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    width: 100% !important;
+    height: auto;
+    padding: 20px;
+  }
+
+  .green-banner-image {
+    width: 100%;
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .left-side-banner h2 {
+    font-size: 16px; /* Smallest font size */
+  }
+
+  .left-side-banner p {
+    font-size: 10px; /* Smallest font size */
+  }
+
+  .left-side-banner button {
+    margin-left: 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+}

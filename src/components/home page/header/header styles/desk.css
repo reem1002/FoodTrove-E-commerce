@@ -61,24 +61,37 @@ body {
 }
 
 .nav-link:visited {
-  color: #000; 
+  color: #000;
 }
 
 .nav-link:focus,
 .nav-link:active {
   outline: none;
   color: #000;
-  text-decoration: none; 
+  text-decoration: none;
 }
 .telephone {
   margin-left: 20px !important;
 }
-/* 
-
-.humbergerlist {
-  margin-right: 50px !important;
-} */
 
 .nav-link {
   -webkit-tap-highlight-color: transparent !important;
+}
+
+@media (max-width: 992px) {
+  .humbergerlist {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .humbergerlist {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .humbergerlist {
+    display: none;
+  }
 }
