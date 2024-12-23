@@ -86,3 +86,71 @@
   font-size: 0.8rem !important;
   color: #666;
 }
+
+@media (max-width: 1024px) {
+  .full-container {
+    height: auto !important;
+  }
+  .about-container {
+    padding: 0 80px !important;
+    position: relative;
+  }
+  .about-container .about-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .about-container .about-description p {
+    font-size: 0.8rem;
+  }
+
+  .about-container .stats-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-container .stats-card p {
+    font-size: 0.8rem;
+  }
+
+  .about-container .feature-card h3 {
+    font-size: 1rem;
+  }
+
+  .about-container .feature-card p {
+    font-size: 0.7rem !important;
+  }
+
+  .about-container .decor4 {
+    top: 10% !important;
+    left: 10% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-container .about-header h1 {
+    font-size: 1rem;
+  }
+
+  .about-container .about-description p {
+    font-size: 0.7rem;
+  }
+
+  .about-container .stats-card h2 {
+    font-size: 1rem;
+  }
+
+  .about-container .stats-card p {
+    font-size: 0.7rem;
+  }
+
+  .about-container .feature-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .about-container .feature-card p {
+    font-size: 0.6rem !important;
+  }
+  .about-container .decor4 {
+    top: 10% !important;
+    left: 10% !important;
+  }
+}

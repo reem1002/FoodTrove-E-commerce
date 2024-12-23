@@ -153,3 +153,105 @@ body {
   background-color: red !important;
   border-color: red !important;
 }
+
+@media (max-width: 1024px) {
+  .check-container {
+    height: auto;
+  }
+  .check-container .wholepagee {
+    width: 100% !important;
+    height: auto !important;
+    margin: 20px auto !important;
+  }
+
+  .check-container .wholepagee .card {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .check-container .btn-checkout {
+    width: 50%;
+    font-size: 0.9rem;
+    padding: 8px 0;
+  }
+
+  .check-container .wholepagee .form-control {
+    font-size: 0.85rem;
+  }
+
+  .check-container .wholepagee .summary-box li {
+    font-size: 0.9rem;
+  }
+
+  .check-container .wholepagee .payment-method img {
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .check-container .wholepagee {
+    padding: 10px !important;
+  }
+
+  .check-container .wholepagee h5 {
+    font-size: 1rem;
+  }
+
+  .check-container .wholepagee .card {
+    padding: 10px;
+  }
+
+  .check-container .btn-checkout {
+    font-size: 0.85rem;
+  }
+
+  .check-container .wholepagee .form-label {
+    font-size: 0.85rem;
+  }
+
+  .check-container .wholepagee .form-control {
+    font-size: 0.8rem;
+  }
+
+  .check-container .wholepagee .payment-method img {
+    height: 18px;
+  }
+
+  .check-container .wholepagee .place-order-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .check-container .wholepagee {
+    width: 100%;
+  }
+
+  .check-container .wholepagee h5 {
+    font-size: 0.9rem;
+  }
+
+  .check-container .btn-checkout {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .check-container .wholepagee .form-control {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+
+  .check-container .wholepagee .billing-details {
+    padding: 15px;
+  }
+
+  .check-container .wholepagee .summary-box li {
+    font-size: 0.85rem;
+  }
+
+  .check-container .wholepagee .place-order-btn {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}

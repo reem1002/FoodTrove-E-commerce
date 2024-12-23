@@ -19,6 +19,7 @@ export default function Header() {
     const dispatch = useDispatch();
 
 
+
     const cartItems = useSelector((state) => state.cart.value);
     const cartCount = cartItems.reduce((total, item) => total + 1, 0);
 
@@ -71,11 +72,11 @@ export default function Header() {
         });
     };
     const handleSearch = (e) => {
-        if (e.key === 'Enter') {
-            dispatch(setSearchTerm(e.target.value));
-            navigate('/shop');
-        }
+        dispatch(setSearchTerm(e.target.value));
+        navigate('/shop');
     };
+
+
 
     const handleCategoryChange = (e) => {
         dispatch(setCategory(e.target.value));
@@ -187,7 +188,7 @@ export default function Header() {
                 {/* Search */}
                 <div className="col-4 search">
                     <div className="input-group" style={{ maxWidth: '600px', height: '40px' }}>
-                        <input type="text" className="form-control search-input" placeholder="Search" onKeyDown={handleSearch} />
+                        <input type="text" className="form-control search-input" placeholder="Search" onChange={handleSearch} />
 
                         <select
                             name="category"
@@ -203,8 +204,8 @@ export default function Header() {
                             <option value="Coffes">Coffes</option>
                             <option value="Cream">Cream</option>
                         </select>
-                        <button className="btn" style={{ backgroundColor: "#f53e32", cursor: "auto" }}>
-                            <RiSearchLine style={{ fontSize: '20px', color: "white", cursor: "auto" }} title="search" className="lens" />
+                        <button className="btn" style={{ backgroundColor: "#f53e32" }} onClick={handleSearch}>
+                            <RiSearchLine style={{ fontSize: '20px', color: "white" }} title="search" className="lens" />
                         </button>
                     </div>
                 </div>

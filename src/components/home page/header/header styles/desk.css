@@ -78,9 +78,21 @@ body {
   -webkit-tap-highlight-color: transparent !important;
 }
 
+@media (max-width: 1024px) {
+  .humbergerlist {
+    display: none;
+  }
+  .desk-container {
+    gap: 250px !important;
+  }
+}
+
 @media (max-width: 992px) {
   .humbergerlist {
     display: none;
+  }
+  .desk-container {
+    gap: 180px !important;
   }
 }
 

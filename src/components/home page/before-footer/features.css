@@ -54,11 +54,11 @@
 
 @media (max-width: 1024px) {
   .feature-list {
-    padding: 0 80px;
+    padding: 0 80px !important;
   }
 
   .feature-card {
-    width: 45%;
+    width: 50%;
   }
 
   .feature-text h4 {
@@ -67,6 +67,12 @@
 
   .feature-text p {
     font-size: 11px;
+  }
+}
+
+@media (max-width: 992px) {
+  .feature-list {
+    padding: 0 45px !important;
   }
 }
 

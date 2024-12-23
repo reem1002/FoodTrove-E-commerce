@@ -207,3 +207,41 @@
 .checkout-btn:hover {
   background-color: #e60000 !important;
 }
+
+@media (max-width: 1024px) {
+  .cart-container .decor4 {
+    right: 40px;
+    width: 70px;
+    top: 50%;
+  }
+
+  .cart-container .decor1 {
+    bottom: 20%;
+    left: 80px;
+    width: 60px;
+  }
+  .cart-container .decor3 {
+    bottom: 20%;
+    left: 80px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .cart-container .decor4 {
+    right: 40px;
+    width: 70px;
+    top: 50%;
+  }
+
+  .cart-container .decor1 {
+    bottom: 20%;
+    left: 40px;
+    width: 60px;
+  }
+  .cart-container .decor3 {
+    bottom: 20%;
+    left: 80px;
+    width: 70px;
+  }
+}

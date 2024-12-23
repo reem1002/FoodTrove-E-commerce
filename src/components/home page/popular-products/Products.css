@@ -32,12 +32,12 @@
 
 @media (max-width: 1200px) {
   .products-container {
-    padding: 0 120px; /* Reduce padding for medium screens */
-    grid-template-columns: repeat(4, 1fr); /* Adjust grid columns */
+    padding: 0 80px;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .headerProducts {
-    padding: 0 120px;
+    padding: 0 80px;
   }
 
   .headerProducts h2 {
@@ -47,17 +47,12 @@
 
 @media (max-width: 992px) {
   .products-container {
-    padding: 0 60px; /* Further reduce padding */
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); /* Fewer columns for smaller screens */
+    padding: 0 60px;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .headerProducts {
     padding: 0 60px;
-    flex-direction: column; /* Stack header content */
-    align-items: flex-start; /* Align items to the start */
   }
 
   .headerProducts h2 {
@@ -67,11 +62,8 @@
 
 @media (max-width: 768px) {
   .products-container {
-    padding: 0 30px; /* Minimal padding */
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Two columns for tablet-sized screens */
+    padding: 0 30px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .headerProducts {
@@ -85,9 +77,9 @@
 
 @media (max-width: 480px) {
   .products-container {
-    padding: 0 15px; /* Almost no padding for small devices */
-    grid-template-columns: repeat(1, 1fr); /* Single column for small screens */
-    gap: 15px; /* Smaller gaps */
+    padding: 0 15px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
   }
 
   .headerProducts {

@@ -224,12 +224,12 @@ const Shop = () => {
         brand: "",
         dietType: [],
         minPrice: 0,
-        maxPrice: 1000, 
+        maxPrice: 1000,
         minRating: "",
         category: category,
     });
     const [currentPage, setCurrentPage] = useState(1);
-    const productsPerPage = 6; 
+    const productsPerPage = 6;
     const dispatch = useDispatch();
     const cart = useSelector((state) => state.cart.value);
 
@@ -239,11 +239,11 @@ const Shop = () => {
             .then((response) => response.json())
             .then((data) => {
                 setProducts(data);
-                setLoading(false); 
+                setLoading(false);
             })
             .catch((error) => {
                 setProducts(fallbackProducts);
-                setLoading(false); 
+                setLoading(false);
             });
 
 
@@ -264,6 +264,7 @@ const Shop = () => {
 
                 return matchesSearch && matchesCategory;
             });
+
 
             setFilteredProducts(filtered);
         }
@@ -429,7 +430,7 @@ const Shop = () => {
 
     return (
         <div className="wholepage">
-
+            <img src={`${process.env.PUBLIC_URL}/imgs/decor/decor5.png`} alt="decor" className="decor4" />
             <div className="heading-bar">
                 <HeadingBar />
             </div>

@@ -89,7 +89,7 @@ const Cart = () => {
 
     return (
         <div className="cart-container">
-            <img src={`${process.env.PUBLIC_URL}/imgs/decor/decor8.png`} alt="decor" className="decor1" />
+            <img src={`${process.env.PUBLIC_URL}/imgs/decor/decor3.png`} alt="decor" className="decor1" />
             <img src={`${process.env.PUBLIC_URL}/imgs/decor/decor6.png`} alt="decor" className="decor3" />
             <img src={`${process.env.PUBLIC_URL}/imgs/decor/decor7.png`} alt="decor" className="decor4" />
             <div className="heading-bar">

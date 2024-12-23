@@ -34,6 +34,14 @@ body {
   border: 1px solid #64b496;
 }
 
+.second-desk .search-input:focus {
+  border: 1px solid #64b496;
+}
+.second-desk .btn:hover {
+  background-color: #ec3c2f !important;
+  color: white !important;
+  border: 1px solid #f53e32 !important;
+}
 .icons {
   display: flex;
   align-items: center;
@@ -73,18 +81,24 @@ p {
   top: 0;
   right: -15px;
 }
-/* .lens:hover {
+.lens:hover {
   transform: scale(1.1);
-} */
+}
 
 .register:hover {
   transform: scale(1.05);
   font-weight: bold;
 }
 
+@media (max-width: 1024px) {
+  .second-desk .sort-dropdown {
+    max-width: 50px !important;
+  }
+}
+
 @media (max-width: 992px) {
-  .search {
-    display: none !important;
+  .second-desk .sort-dropdown {
+    max-width: 50px !important;
   }
 }
 

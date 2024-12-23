@@ -19,3 +19,15 @@ heading-bar span {
   background-color: transparent;
   border: none;
 }
+
+@media (max-width: 1024px) {
+  .heading-bar {
+    padding: 0 80px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .heading-bar {
+    padding: 0 50px !important;
+  }
+}

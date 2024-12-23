@@ -12,3 +12,20 @@ body {
   justify-content: center !important;
   margin-top: 50px !important;
 }
+
+@media (max-width: 1200px) {
+  .faq-container {
+    padding: 0px 80px;
+  }
+  .faq-container h3 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .faq-container {
+    padding: 20px 80px !important;
+  }
+  .faq-container h3 {
+    font-size: 1.5rem !important;
+  }
+}
