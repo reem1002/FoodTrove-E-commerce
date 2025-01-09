@@ -78,10 +78,35 @@
 
 @media (max-width: 768px) {
   .feature-list {
+    padding: 0 20px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .feature-card {
+    width: 100%;
+  }
+
+  .feature-text h4 {
+    font-size: 14px;
+  }
+
+  .feature-text p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-list {
+    width: 90% !important;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 20px;
     margin-bottom: 0px !important;
+    margin: auto;
+  }
+
+  .feature-list {
+    padding: 0 !important;
   }
 
   .feature-card {

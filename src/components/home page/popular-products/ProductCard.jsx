@@ -115,7 +115,7 @@ const ProductCard = ({
                         onClick={handleAddToCart}
                     >
                         <RiShoppingCartLine style={{ fontSize: "20px", color: "white", marginRight: "5px" }} title="cart" />
-                        Add
+                        <span>Add</span>
                     </button>
                 </div>
             </div>

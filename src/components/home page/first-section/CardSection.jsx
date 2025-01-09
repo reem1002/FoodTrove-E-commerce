@@ -11,11 +11,14 @@ const CardSection = () => {
                     title="Everyday Fresh & Clean with Our Products"
                     buttonText="Shop Now"
                 />
-                <Card
-                    bgImage="url('imgs/cardsection/banner-2.png')"
-                    title="Make your Breakfast Healthy and Easy"
-                    buttonText="Shop Now"
-                />
+                <span className="second">
+                    <Card
+                        bgImage="url('imgs/cardsection/banner-2.png')"
+                        title="Make your Breakfast Healthy and Easy"
+                        buttonText="Shop Now"
+                        className="second"
+                    />
+                </span>
                 <Card
                     bgImage="url('imgs/cardsection/banner-3.png')"
                     title="The best Organic Products Online"

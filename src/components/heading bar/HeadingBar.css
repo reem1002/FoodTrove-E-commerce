@@ -31,3 +31,15 @@ heading-bar span {
     padding: 0 50px !important;
   }
 }
+
+@media (max-width: 768px) {
+  .heading-bar {
+    padding: 0 50px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading-bar {
+    padding: 0 15px !important;
+  }
+}

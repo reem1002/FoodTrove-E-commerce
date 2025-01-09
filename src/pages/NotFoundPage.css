@@ -50,3 +50,9 @@
   color: #f43e31;
   font-weight: bold;
 }
+
+@media (max-width: 564px) {
+  .not-found-container {
+    width: 90% !important;
+  }
+}

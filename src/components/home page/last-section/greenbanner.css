@@ -174,65 +174,86 @@
 @media (max-width: 768px) {
   .banner-container {
     width: 90% !important;
-    height: 250px;
+    margin: 0 auto !important;
+    padding: 20px;
+    height: 225px !important;
   }
 
   .green-banner-image {
-    position: relative;
-    width: 70%;
-    right: 0;
-    margin: auto;
+    width: 200px !important;
+    position: absolute;
+    bottom: 0px !important;
+    left: 385px !important;
   }
 
   .left-side-banner {
-    width: 100% !important;
-    padding: 10px;
+    width: 60% !important;
+    max-width: 100% !important;
+    position: absolute;
+    top: 40px;
+    left: 0;
   }
 
   .left-side-banner h2 {
-    font-size: 18px; /* Reduced for smaller screens */
-    width: 90%;
+    font-size: 16px !important; /* Smallest font size */
   }
 
   .left-side-banner p {
-    font-size: 11px; /* Reduced for smaller screens */
-    width: 90%;
+    font-size: 14px !important;
+    font-weight: 200px !important;
+    width: 75% !important;
+    align-self: self-start;
+    margin-left: 20px !important;
   }
 
-  .left-side-banner button {
-    margin-left: 0 !important;
+  /* .left-side-banner button {
+    display: none;
   }
 
-  .row-banner {
-    flex-direction: column !important;
-    margin-top: 30px !important;
-  }
+  .left-side-banner .input-group {
+    display: none;
+  } */
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .banner-container {
-    width: 100% !important;
-    height: auto;
+    width: 90% !important;
     padding: 20px;
+    height: 180px !important;
   }
 
   .green-banner-image {
-    width: 100%;
-    position: static;
-    margin-bottom: 20px;
+    width: 150px !important;
+    position: absolute;
+    bottom: 0px !important;
+    left: 155px !important;
+  }
+
+  .left-side-banner {
+    width: 80% !important;
+    max-width: 100% !important;
+    position: absolute;
+    top: 40px;
+    left: 0;
   }
 
   .left-side-banner h2 {
-    font-size: 16px; /* Smallest font size */
+    font-size: 16px !important; /* Smallest font size */
   }
 
   .left-side-banner p {
-    font-size: 10px; /* Smallest font size */
+    font-size: 14px !important;
+    font-weight: 200px !important;
+    width: 75% !important;
+    align-self: self-start;
+    margin-left: 10px !important;
   }
 
   .left-side-banner button {
-    margin-left: 0 !important;
-    width: 100%;
-    text-align: center;
+    display: none;
+  }
+
+  .left-side-banner .input-group {
+    display: none;
   }
 }

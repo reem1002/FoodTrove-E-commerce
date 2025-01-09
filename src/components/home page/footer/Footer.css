@@ -228,10 +228,16 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .footer {
+    margin: 0 !important;
+  }
+  .footer-container {
+    gap: 10px !important;
+  }
   .footer .footer-section h2,
   .footer .footer-section h4 {
-    font-size: 13px;
+    font-size: 16px !important;
   }
 
   .footer .footer-section p {
@@ -249,7 +255,7 @@
     justify-content: start;
     align-items: start;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 10px;
   }
 
   .footer .newsletter-input input {
@@ -263,5 +269,18 @@
 
   .footer .footer-bottom {
     font-size: 9px;
+  }
+  .footer ol,
+  ul {
+    padding-left: 0.2rem !important;
+  }
+  .about svg {
+    width: 10px !important;
+  }
+  .footer .footer-bottom p {
+    font-size: 0.7rem !important;
+  }
+  .footer .footer-gallery img {
+    height: 30px !important;
   }
 }

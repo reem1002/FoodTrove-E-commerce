@@ -190,6 +190,10 @@
     font-size: 14px !important;
   }
 
+  .left-side .form-control {
+    font-size: 14px !important;
+  }
+
   .left-side {
     width: 100% !important;
   }
@@ -200,5 +204,24 @@
 
   .right-side span {
     padding: 0.3rem 0.5rem !important;
+  }
+
+  .lattace {
+    display: none;
+  }
+  .toot-img {
+    max-width: 500px !important;
+    width: 80px !important;
+    top: 10px;
+    right: 0;
+  }
+  .fruit-dish-img {
+    max-width: 500px !important;
+    width: 80px !important;
+    bottom: 0;
+    left: 10px;
+  }
+  .hero-section .py-5 {
+    padding-top: 2rem !important;
   }
 }

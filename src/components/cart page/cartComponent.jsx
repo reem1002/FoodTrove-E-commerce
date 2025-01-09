@@ -95,7 +95,7 @@ const Cart = () => {
             <div className="heading-bar">
                 <HeadingBar />
             </div>
-            <div style={{ padding: "20px" }}>
+            <div style={{ padding: "20px" }} className="cart-table">
                 <table style={{ width: "100%", borderCollapse: "collapse" }}>
                     <thead>
                         <tr>
@@ -117,8 +117,8 @@ const Cart = () => {
                                 <tr key={item.id}>
                                     <td >
                                         <Link
-                                            to={`/product/${item.id}`} // Correct URL with the product ID
-                                            onClick={() => handleClick(item)} // Pass the item to handleClick
+                                            to={`/product/${item.id}`}
+                                            onClick={() => handleClick(item)}
                                             className="text-decoration-none link-from-cart"
                                         >
                                             <img
@@ -126,21 +126,20 @@ const Cart = () => {
                                                 alt={item.title}
                                                 style={{ width: "50px", marginRight: "10px" }}
                                             />
-                                            {item.title}
+                                            {item.title.length > 20 ? `${item.title.substring(0, 18)}...` : item.title}
                                         </Link>
-
                                     </td>
-                                    <td>${item.price.toFixed(2)}</td>
-                                    <td>{item.size ? item.size : item.sizes[0]}</td>
-                                    <td>
+                                    <td data-label="Price">${item.price.toFixed(2)}</td>
+                                    <td data-label="Size">{item.size ? item.size : item.sizes[0]}</td>
+                                    <td data-label="Quantity">
                                         <div className="quantity">
                                             <button onClick={() => handleQuantityChange(item.id, -1)}>-</button>
                                             <span style={{ margin: "0 10px" }}>{item.quantity}</span>
                                             <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>
                                         </div>
                                     </td>
-                                    <td>${(item.price * item.quantity).toFixed(2)}</td>
-                                    <td>
+                                    <td data-label="Total">${(item.price * item.quantity).toFixed(2)}</td>
+                                    <td >
                                         <button onClick={() => handleRemove(item.id)}>
                                             <RiDeleteBin6Line />
                                         </button>
@@ -148,6 +147,7 @@ const Cart = () => {
                                 </tr>
                             ))}
                         </tbody>
+
                     )}
 
 

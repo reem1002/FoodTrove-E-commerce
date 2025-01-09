@@ -1,22 +1,20 @@
-/* Make the tab container and content area look cleaner */
 .custom-tabs .nav-link {
   border: none;
-  color: #000; /* Default tab text color */
+  color: #000;
   font-weight: 500;
   font-size: 18px;
 }
 
 .custom-tabs .nav-link.active {
-  color: #ff4a4a; /* Red color for active tab text */
+  color: #ff4a4a;
   font-weight: bold;
-  border-bottom: 4px solid #64b496; /* Bottom border for active tab */
+  border-bottom: 4px solid #64b496;
 }
 
 .custom-tabs .nav-link:hover {
-  color: #ff4a4a; /* Hover effect */
+  color: #ff4a4a;
 }
 
-/* Style the tab content text for better readability */
 .custom-tabs .tab-content p {
   color: #666;
   line-height: 1.6;
@@ -26,4 +24,49 @@
   border-radius: 10px;
   padding: 20px 40px;
   margin-bottom: 100px;
+}
+
+/* استجابة للشاشات بحجم أقل من 768px */
+@media (max-width: 768px) {
+  .custom-tabs .nav-link {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .custom-tabs .nav-link.active {
+    border-bottom: 3px solid #64b496;
+  }
+
+  .custom-tabs .tab-content p {
+    font-size: 14px;
+
+  }
+
+  .tap-container {
+    padding: 15px 20px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+  }
+}
+
+/* استجابة للشاشات بحجم أقل من 576px */
+@media (max-width: 576px) {
+  .custom-tabs .nav-link {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .custom-tabs .nav-link.active {
+    border-bottom: 2px solid #64b496;
+  }
+
+  .custom-tabs .tab-content p {
+    font-size: 12px;
+  }
+
+  .tap-container {
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+  }
 }

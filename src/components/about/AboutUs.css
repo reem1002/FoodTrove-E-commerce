@@ -54,10 +54,8 @@
 
 /* Features Section */
 .about-container .about-features {
-  display: flex;
-
-  justify-content: space-between;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .about-container .feature-card {
@@ -91,6 +89,9 @@
   .full-container {
     height: auto !important;
   }
+  .about-container .feature-card {
+    width: 100%;
+  }
   .about-container {
     padding: 0 80px !important;
     position: relative;
@@ -115,6 +116,14 @@
     font-size: 1rem;
   }
 
+  .about-container .about-features {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .about-container .feature-card {
+    width: 100%;
+  }
   .about-container .feature-card p {
     font-size: 0.7rem !important;
   }
@@ -146,11 +155,127 @@
     font-size: 0.9rem;
   }
 
+  .about-container .about-features {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
   .about-container .feature-card p {
     font-size: 0.6rem !important;
   }
   .about-container .decor4 {
     top: 10% !important;
     left: 10% !important;
+  }
+}
+
+/* استجابة للشاشات بحجم أقل من 768px */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 0 20px;
+  }
+
+  .about-container .about-header h1 {
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .about-container .about-description p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .about-container .about-stats {
+    gap: 15px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .about-container .stats-card {
+    padding: 10px;
+    margin: 0;
+  }
+
+  .about-container .stats-card h2 {
+    font-size: 1rem;
+  }
+
+  .about-container .stats-card p {
+    font-size: 0.7rem;
+  }
+
+  .about-container .about-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .about-container .feature-card {
+    padding: 15px;
+  }
+
+  .about-container .feature-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .about-container .feature-card p {
+    font-size: 0.65rem !important;
+  }
+}
+
+/* استجابة للشاشات بحجم أقل من 576px */
+@media (max-width: 576px) {
+  .about-container {
+    padding: 20px 40px !important;
+  }
+
+  .about-container .firstpart {
+    width: 100% !important;
+  }
+
+  .about-container .about-header h1 {
+    font-size: 0.9rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+
+  .about-container .about-description {
+    font-size: 0.7rem;
+    line-height: 1.3;
+    width: 100% !important;
+  }
+
+  .about-container .about-stats {
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .about-container .stats-card {
+    padding: 8px;
+  }
+
+  .about-container .stats-card h2 {
+    font-size: 0.9rem;
+  }
+
+  .about-container .stats-card p {
+    font-size: 0.8rem !important;
+  }
+
+  .about-container .about-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-container .feature-card {
+    padding: 10px;
+    margin-bottom: 0 !important;
+  }
+
+  .about-container .feature-card h3 {
+    font-size: 0.8rem;
+  }
+
+  .about-container .feature-card p {
+    font-size: 0.6rem !important;
   }
 }

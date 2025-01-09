@@ -100,10 +100,16 @@ body {
   .humbergerlist {
     display: none;
   }
+  .telephone {
+    display: none !important;
+  }
 }
 
 @media (max-width: 576px) {
-  .humbergerlist {
+  .desk-container .humbergerlist {
     display: none;
+  }
+  .desk-container .telephone {
+    display: none !important;
   }
 }
