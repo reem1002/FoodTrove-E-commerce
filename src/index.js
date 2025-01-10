@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { Provider } from 'react-redux';
 import { store, persistor } from './redux/store';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import reportWebVitals from './reportWebVitals';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,3 +22,6 @@ root.render(
   </React.StrictMode>
 );
 
+
+serviceWorkerRegistration.register();
+reportWebVitals();
