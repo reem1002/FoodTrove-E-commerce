@@ -344,6 +344,10 @@
   .cart-container .additional {
     width: 92% !important;
   }
+  .cart-container .checkout-btn {
+    padding: 10px 15px;
+    font-size: 12px !important;
+  }
 }
 @media (max-width: 350px) {
   .cart-container table tr {
