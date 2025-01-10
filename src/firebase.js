@@ -1,19 +1,28 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
+import { getAnalytics } from "firebase/analytics";
+import { getDatabase } from "firebase/database"; 
+import { getFirestore } from "firebase/firestore"; 
+import { getAuth } from "firebase/auth"; 
+
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD8UKIpeKA2u0kkJ6FqjVlF0uAH1TDLQhI",
-    authDomain: "foodtrove-c7068.firebaseapp.com",
-    databaseURL: "https://foodtrove-c7068-default-rtdb.firebaseio.com",
-    projectId: "foodtrove-c7068",
-    storageBucket: "foodtrove-c7068.firebasestorage.app",
-    messagingSenderId: "591827392558",
-    appId: "1:591827392558:web:fb47b380e7543f800da7bf",
-    measurementId: "G-TZ3M6FBL43"
+    apiKey: "AIzaSyDiP9Tt29ATiDHUZ7-HhQSHYfMVKPtlPzc",
+    authDomain: "reemmarket-44896.firebaseapp.com",
+    databaseURL: "https://reemmarket-44896-default-rtdb.firebaseio.com",
+    projectId: "reemmarket-44896",
+    storageBucket: "reemmarket-44896.firebasestorage.app",
+    messagingSenderId: "334207175380",
+    appId: "1:334207175380:web:fac42eb8a8f8957b3d0941",
+    measurementId: "G-G8QSWLB7XX",
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
 
-export { database };
+const app = initializeApp(firebaseConfig);
+
+
+const analytics = getAnalytics(app); 
+const database = getDatabase(app); 
+const firestore = getFirestore(app); 
+const auth = getAuth(app); 
+
+export { app, analytics, database, firestore, auth };
