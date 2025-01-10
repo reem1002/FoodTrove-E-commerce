@@ -8,7 +8,8 @@ import { ClipLoader } from 'react-spinners';
 import { database } from "../../../firebase";
 import { ref, onValue } from "firebase/database";
 
-const fallbackProducts = [];
+const fallbackProducts = [
+];
 
 const Products = () => {
     const dispatch = useDispatch();
