@@ -87,7 +87,7 @@ export default function Header() {
         <Popover id="cart-popover">
             <Popover.Body>
                 {cartItems.length > 0 ? (
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, zIndex: 1000 }}>
                         {cartItems.map((item) => (
                             <li key={item.id} style={{ marginBottom: '10px', padding: "10px 0", borderBottom: "1px solid #ddd", position: "relative" }}>
                                 <Link to={`/product/${item.id}`} onClick={() => handleNavigateClick(item)} style={{
@@ -118,7 +118,9 @@ export default function Header() {
         <Popover id="fav-popover">
             <Popover.Body>
                 {favItems.length > 0 ? (
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                    <ul style={{
+                        listStyle: 'none', padding: 0, margin: 0, zIndex: 1000
+                    }}>
                         {favItems.map((item) => (
                             <li key={item.id} style={{ marginBottom: '10px', padding: "10px 0", borderBottom: "1px solid #ddd", position: "relative" }}>
                                 <Link to={`/product/${item.id}`} onClick={() => handleNavigateClick(item)} style={{
@@ -149,7 +151,7 @@ export default function Header() {
     const accountPopover = (
         <Popover id="account-popover">
             <Popover.Body>
-                <div>
+                <div style={{ zIndex: 1000 }}>
                     <Link to="/login" style={{ textDecoration: "none", color: "#000", display: "block", padding: "5px 0", marginRight: "30px" }}>
                         <span className='register'>Login</span>
                     </Link>

@@ -88,6 +88,7 @@
   background-color: #fff;
   max-width: 250px;
   text-align: start;
+  transition: all ease-in-out 0.3s !important;
 }
 
 .app-container .tag {

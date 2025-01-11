@@ -5,9 +5,10 @@ body {
 }
 
 .desk-container {
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  gap: 150px !important;
+  justify-content: space-around;
+  gap: 450px;
   align-items: center;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -77,6 +78,9 @@ body {
 .nav-link {
   -webkit-tap-highlight-color: transparent !important;
 }
+.humbergerlist {
+  display: none;
+}
 
 @media (max-width: 1024px) {
   .humbergerlist {
@@ -103,13 +107,87 @@ body {
   .telephone {
     display: none !important;
   }
+  .desk-container {
+    display: flex !important;
+
+    justify-content: space-around !important;
+    gap: 0 !important;
+  }
 }
 
 @media (max-width: 576px) {
-  .desk-container .humbergerlist {
+  /* .desk-container .humbergerlist {
     display: none;
   }
+
   .desk-container .telephone {
     display: none !important;
+  } */
+
+  .desk-container .humbergerlist {
+    display: block;
+  }
+  .desk-container .hamIcon {
+    font-size: 28px !important;
+  }
+  .desk-container .navLinkk {
+    display: none;
+  }
+  .desk-container {
+    height: 47px;
+    display: flex !important;
+
+    justify-content: space-around !important;
+    gap: 0 !important;
+  }
+
+  .dropdown-menu-container {
+    position: absolute;
+    top: 55px;
+    left: 10%;
+    width: 80%;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.3s !important;
+  }
+
+  .dropdown-menu-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown-menu-container a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 5px;
+  }
+  .dropdown-menu-container a:hover {
+    color: #242323;
+    font-weight: bold;
+  }
+
+  .dropdown-menu-container a:focus,
+  .dropdown-menu-container a:active,
+  .dropdown-menu-container a:visited {
+    color: #242323;
   }
 }

@@ -1,7 +1,34 @@
 import React from 'react';
 import './heroSection.css';
+import { useState } from 'react';
+import Swal from 'sweetalert2';
+
 
 export default function HeroSection() {
+
+    const [email, setEmail] = useState('');
+
+    const handleSubscribe = () => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailRegex.test(email)) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Subscribed!',
+                text: 'You have successfully subscribed.',
+                confirmButtonColor: '#28a745',
+            });
+            setEmail('');
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Email',
+                text: 'Please enter a valid email address.',
+                confirmButtonColor: '#dc3545',
+            });
+        }
+    };
+
     return (
         <div className="hero-section container-fluid d-flex align-items-start  py-5 " style={{ backgroundColor: '#f5f5f5', position: 'relative' }}>
 
@@ -30,10 +57,12 @@ export default function HeroSection() {
                             style={{
                                 borderRadius: '30px', paddingLeft: '15px'
                             }}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
-                        < button className="btn lightGreenbtn" style={{ borderRadius: '30px', marginLeft: '-60px' }} onClick={() => alert('Subscribed!')}>
+                        < button className="btn lightGreenbtn" style={{ borderRadius: '30px', marginLeft: '-60px', zIndex: '999' }} onClick={handleSubscribe}>
                             Subscribe
                         </button>
+
                     </div>
 
 

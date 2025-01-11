@@ -9,7 +9,7 @@ import { useEffect } from "react";
 const AboutUs = () => {
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(changePageName("About Us"));
+        dispatch(changePageName("About"));
     }, [dispatch]);
     return (
         <div className="full-container position-relative">

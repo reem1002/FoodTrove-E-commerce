@@ -84,6 +84,7 @@
   background-color: #3bb77e !important;
   color: #fff !important;
   padding: 0.7rem 1.4rem !important;
+  z-index: 100;
 }
 
 .bubbels {

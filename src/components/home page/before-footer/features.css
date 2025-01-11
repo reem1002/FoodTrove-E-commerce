@@ -81,6 +81,7 @@
     padding: 0 20px !important;
     width: 90% !important;
     margin: 0 auto !important;
+    gap: 10px;
   }
 
   .feature-card {
@@ -101,6 +102,7 @@
     width: 90% !important;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
     margin-bottom: 0px !important;
     margin: auto;
   }
@@ -111,7 +113,6 @@
 
   .feature-card {
     width: 100%;
-    margin-bottom: 20px;
   }
 
   .feature-text h4 {

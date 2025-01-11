@@ -5,6 +5,7 @@
   height: max-content;
   font-family: "Quicksand", "Poppins", sans-serif;
   overflow: hidden;
+  transition: all ease-in-out 0.3s !important;
 }
 
 .product-card:hover {

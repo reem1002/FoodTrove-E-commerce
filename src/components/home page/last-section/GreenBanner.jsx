@@ -1,7 +1,31 @@
 import React from 'react';
 import './greenbanner.css';
+import { useState } from 'react';
+import Swal from 'sweetalert2';
 
 export default function GreenBanner() {
+    const [email, setEmail] = useState('');
+
+    const handleSubscribe = () => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailRegex.test(email)) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Subscribed!',
+                text: 'You have successfully subscribed.',
+                confirmButtonColor: '#28a745',
+            });
+            setEmail('');
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Email',
+                text: 'Please enter a valid email address.',
+                confirmButtonColor: '#dc3545',
+            });
+        }
+    };
     return (
         <div>
             <div className="green-banner">
@@ -19,14 +43,15 @@ export default function GreenBanner() {
                                     style={{
                                         borderRadius: '30px', paddingLeft: '15px'
                                     }}
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
-                                < button className="btn lightGreenbtn " style={{ borderRadius: '30px', marginLeft: '-60px' }} onClick={() => alert('Subscribed!')}>
+                                < button className="btn lightGreenbtn " style={{ borderRadius: '30px', marginLeft: '-60px', zIndex: '999' }} onClick={handleSubscribe}>
                                     Subscribe
                                 </button>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                            <img src="./imgs/lastsectionyarab/banner-9.png.png" className="green-banner-image" />
+                            <img src={`${process.env.PUBLIC_URL}/imgs/lastsectionyarab/banner-9.png.png`} className="green-banner-image" />
                         </div>
                     </div>
                 </div>
