@@ -71,6 +71,13 @@ export default function Header() {
             behavior: "smooth",
         });
     };
+    const handelLogOrSighPage = () => {
+        navigate('/login');
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
     const handleSearch = (e) => {
         dispatch(setSearchTerm(e.target.value));
         navigate('/shop');
@@ -89,7 +96,7 @@ export default function Header() {
                 {cartItems.length > 0 ? (
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, zIndex: 1000 }}>
                         {cartItems.map((item) => (
-                            <li key={item.id} style={{ marginBottom: '10px', padding: "10px 0", borderBottom: "1px solid #ddd", position: "relative" }}>
+                            <li key={item.id} style={{ marginBottom: '10px', padding: "10px 0", borderBottom: "1px solid #ddd", position: "relative" }} >
                                 <Link to={`/product/${item.id}`} onClick={() => handleNavigateClick(item)} style={{
                                     textDecoration: "none",
                                     color: "#000",
@@ -152,10 +159,10 @@ export default function Header() {
         <Popover id="account-popover">
             <Popover.Body>
                 <div style={{ zIndex: 1000 }}>
-                    <Link to="/login" style={{ textDecoration: "none", color: "#000", display: "block", padding: "5px 0", marginRight: "30px" }}>
+                    <Link to="/login" style={{ textDecoration: "none", color: "#000", display: "block", padding: "5px 0", marginRight: "30px" }} onClick={handelLogOrSighPage}>
                         <span className='register'>Login</span>
                     </Link>
-                    <Link to="/signup" style={{ textDecoration: "none", color: "#000", display: "block", padding: "5px 0", marginRight: "30px" }}>
+                    <Link to="/signup" style={{ textDecoration: "none", color: "#000", display: "block", padding: "5px 0", marginRight: "30px" }} onClick={handelLogOrSighPage}>
                         <span className='register'>Sign Up</span>
                     </Link>
                 </div>
